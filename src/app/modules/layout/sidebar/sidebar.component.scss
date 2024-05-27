@@ -1,0 +1,56 @@
+.sidebar-container {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100vh;
+  font-size: medium;
+  width: 200px;
+  border-right: 1px solid rgb(210, 210, 210);
+
+  li {
+    cursor: pointer;
+    padding: 8px;
+    display: flex; /* Add display flex */
+    align-items: center; /* Align items vertically */
+
+    &:hover {
+      background-color: white;
+      border-radius: 4px;
+      color: green;
+      transition: 0.15s;
+    }
+  }
+
+  &.collapsed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .navbar-brand {
+      display: none;
+    }
+  }
+
+  .collapse-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    padding: 5px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #218838;
+    }
+  }
+
+  .active {
+    background-color: white;
+    border-radius: 4px;
+    color: green;
+    transition: 0.15s;
+  }
+}

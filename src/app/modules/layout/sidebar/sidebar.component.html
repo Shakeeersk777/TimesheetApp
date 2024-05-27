@@ -1,0 +1,44 @@
+<div
+  id="bdSidebar"
+  [ngStyle]="{ 'width.px': isCollapsed ? '60' : '200' }"
+  [ngClass]="{ collapsed: isCollapsed }"
+  class="container flex-column flex-shrink-0 p-3 bg-success text-white offcanvas-md offcanvas-start sidebar-container"
+>
+  <div
+    class="navbar-brand"
+    [ngStyle]="{ display: isCollapsed ? 'none' : 'block' }"
+  >
+    Admin
+  </div>
+  <button class="collapse-btn" (click)="toggleCollapse()">
+    <i class="fas fa-chevron-left" *ngIf="isCollapsed"></i>
+    <i class="fas fa-chevron-right" *ngIf="!isCollapsed"></i>
+  </button>
+
+  <hr />
+  <ul class="mynav nav nav-pills flex-column mb-auto">
+    <li
+      class="nav-item mb-1 m-2"
+      *ngFor="let sidebar of sidebarList"
+      (click)="onSidebarChange(sidebar)"
+      [class.active]="currentTab == sidebar.Key"
+    >
+      <ng-container *ngIf="isCollapsed; else textContent">
+        <i class="fas {{ sidebar.Icon }}"></i>
+        <!-- Show icon -->
+      </ng-container>
+      <ng-template #textContent>
+        <span>{{ sidebar.Value }}</span>
+        <!-- <span class="notification-badge">5</span> -->
+      </ng-template>
+    </li>
+  </ul>
+  <hr />
+  <div class="d-flex" *ngIf="!isCollapsed">
+    <span>
+      <h6 class="mt-1 mb-0">
+        Crafting Digital Excellence with Precision and Innovation
+      </h6>
+    </span>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+.timesheet-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  // overflow-x: auto;
+
+  .search-bar {
+    width: 100px; // Adjust width as needed
+    margin: 10px;
+    float: right;
+  }
+
+  .no-data-found {
+    margin-top: 70px;
+  }
+
+  // Media query for smaller screens
+  @media screen and (max-width: 768px) {
+    padding: 0 10px; // Add padding to the container
+
+    .search-bar {
+      width: 100%; // Occupy full width
+    }
+  }
+}

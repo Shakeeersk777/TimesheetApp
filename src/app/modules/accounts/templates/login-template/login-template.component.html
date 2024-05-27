@@ -1,0 +1,38 @@
+
+<!-- <ng-template [ngIf]="showLoader">
+  <div class="video-popup">
+    <div class="video-container">
+      <button class="close-button">Close</button>
+      <img src="../../../../../assets/images/loader.gif" alt="">
+    </div>
+  </div>
+</ng-template> -->
+
+<!-- <ng-template [ngIf]="!showLoader"> -->
+  <div class="login-container">
+    <div class="content">
+      <h2>Timesheet Login</h2>
+      <form [formGroup]="loginForm" class="login-form" >
+        <mat-form-field class="form-field">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" required />
+        </mat-form-field>
+        <mat-form-field class="form-field">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            placeholder="Password"
+            [type]="hide ? 'password' : 'text'"
+            formControlName="password"
+            required
+          />
+          <mat-icon matSuffix (click)="hide = !hide">{{
+            hide ? "visibility_off" : "visibility"
+          }}</mat-icon>
+        </mat-form-field>
+      </form>
+      <button class="login-button" mat-flat-button color="primary" (click)="login()">Login</button>
+    </div>
+  </div>
+<!-- </ng-template> -->
+

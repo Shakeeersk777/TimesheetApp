@@ -1,0 +1,24 @@
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style-type: none;
+  background-color: white;
+  height: 50px;
+  font-size: medium;
+  font-weight: 500;
+  border-bottom: 1px solid rgb(210, 210, 210);
+  li {
+    cursor: pointer;
+    color: black;
+    padding: 8px;
+    border-bottom: 3px solid white;
+    &:hover {
+      border-bottom: 3px solid #28a745;
+    }
+    & :active {
+      background-color: #90bbd1;
+    }
+  }
+}

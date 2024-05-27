@@ -1,0 +1,77 @@
+.timesheet-container {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto; // Add this line to enable horizontal scrolling
+
+  .top-btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .week-btns {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+
+      .week-btn {
+        margin: 5px;
+        padding: 8px 16px;
+        border-radius: 4px;
+        color: green;
+        background-color: white;
+        border: 1px solid green;
+        font-weight: 500;
+
+        &:hover {
+          color: white;
+          background-color: green;
+          border: 1px solid white;
+          transition: 0.15s;
+        }
+
+        &:disabled {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  table {
+    border: 1px solid rgb(210, 210, 210);
+    overflow-x: scroll;
+    .input-time,
+    .project-dropdwon,
+    .task-dropdwon {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .form-control {
+      width: 100px;
+      margin: 6px;
+    }
+
+    @media (min-width: 768px) {
+      .top-btns {
+        flex-wrap: nowrap;
+      }
+
+      .week-btns {
+        flex-wrap: nowrap;
+
+        .week-btn {
+          margin: 0 10px;
+        }
+      }
+
+      .submit-timesheet-btn {
+        margin: 0 10px;
+      }
+    }
+  }
+}
